@@ -1,0 +1,38 @@
+<div class="d-flex">
+  <div class="mr-auto p-2">Total Price: {{calcTotalPrice() | currency:'INR'}}</div>
+  <div class="p-2"><button class="btn btn-sm btn-primary" [disabled]="!cart?.length" (click)="placeOrder()">Place Order</button></div>
+</div>
+<hr class="totalprice-hr">
+<div *ngIf="!cart?.length" style="text-align: center;">No items in Cart</div>
+<div *ngFor="let cartItem of cart">
+  <div class="card">
+    <div class="card-body row">
+      <div class="col-md-8 col-sm-8 item-detail">
+        <h6 class="card-title">
+          <a class="card-link" [routerLink]="'/product/'+cartItem.item.id">{{cartItem.item.name}}</a>
+        </h6>
+        <p class="card-text">
+          {{ (cartItem.item.description.length>100)? (cartItem.item.description |
+          slice:0:400)+'...':(cartItem.item.description) }}
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-4 item-summary">
+        <p class="card-text">Price: {{cartItem.item.price | currency:'INR'}}</p>
+        <div class="card-text">
+          Qty:
+          <div class="btn-qty noselect" (click)="removeFromCart(cartItem.item)">-</div>
+          <span class="qty">{{cartItem.qty}}</span>
+          <div class="btn-qty noselect" (click)="addToCart(1, cartItem.item)">+</div>
+        </div>
+        <hr>
+        <p class="card-text">{{cartItem.item.price*cartItem.qty | currency:'INR'}}</p>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<hr>
+<div class="d-flex">
+  <div class="mr-auto p-2">Total Price: {{calcTotalPrice() | currency:'INR'}}</div>
+  <div class="p-2"><button class="btn btn-sm btn-primary" [disabled]="!cart?.length" (click)="placeOrder()">Place Order</button></div>
+</div>

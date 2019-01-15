@@ -1,0 +1,33 @@
+<h5>History</h5>
+<hr>
+<small>Note: The admin will automatically approve the orders in 1 business minute(s) beyond which the User will not be
+  able to modify/cancel their Orders</small>
+<br>
+<br>
+<ol>
+  <li *ngFor="let order of orderHistory" class="ohistory">
+    <div class="floatright">
+      <small><strong>Placed On: {{order.date_time| date:'short'}}</strong></small>
+    </div>
+    <div>Order ID: {{order.id}}</div>
+    <ul>
+      <li *ngFor="let item of getOrder(order.id)">
+        <a class="card-link" [routerLink]="'/product/'+item.id">{{item.name}}</a>: {{item.price |
+        currency:'INR'}} x {{item.qty}} = {{item.qty*item.price| currency:'INR'}}
+      </li>
+    </ul>
+    <br>
+    <div class="floatright">
+      <small><strong>Total: {{order.total_price | currency:'INR'}}</strong></small>
+    </div>
+    <div class="floatleft">
+      <button *ngIf="order.status===null" class="btn btn-sm btn-primary">Waiting for Approval</button>
+      <button *ngIf="order.status==='Approved'" class="btn btn-sm btn-success">Approved and Delivered</button>
+      <button *ngIf="order.status==='Cancelled'" class="btn btn-sm btn-warning">Cancelled</button>
+      &nbsp;
+      <button class="btn btn-sm btn-danger" [disabled]="order.status!==null" (click)="cancelOrder(order.id)">Cancel</button>
+      &nbsp;
+      <button class="btn btn-sm btn-default" [disabled]="order.status!==null" (click)="modifyOrder(order.id)">Modify</button>
+    </div>
+  </li>
+</ol>

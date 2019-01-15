@@ -1,0 +1,14 @@
+<h1 align="center" class="list-employee">Employees: </h1>
+<br><br>
+<ul class="list-group" *ngIf="employees?.length > 0">
+  <li class="list-group-item" *ngFor="let employee of employees; let i=index;">
+    <a [routerLink]="'/employees/' + i">
+      {{i+1}}. {{employee.name}}
+      <div style="float:right;"><b>&gt;</b></div>
+    </a>
+  </li>
+</ul>
+
+<div *ngIf="!(employees?.length)">
+  No Employees to display. Go ahead and <a routerLink="/employees/new">add some employees</a> !!!
+</div>

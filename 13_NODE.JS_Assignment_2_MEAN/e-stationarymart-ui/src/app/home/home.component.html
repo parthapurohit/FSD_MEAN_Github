@@ -1,0 +1,25 @@
+<h5>Stationary Items</h5>
+<br>
+<div class="row">
+  <div class="col-md-3" *ngFor="let item of products">
+    <div class="card">
+      <a class="card-link" [routerLink]="'/product/'+item.id">
+        <img class="card-img-top" [src]="item.image" alt="Card image cap" width="286" height="180">
+      </a>
+      <div class="card-body">
+        <a class="card-link" [routerLink]="'/product/'+item.id">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">Price: {{item.price | currency:'INR'}}</p>
+          <p class="card-text item-description">
+            {{ (item.description.length>6)? (item.description | slice:0:100)+'...':(item.description) }}
+          </p>
+        </a>
+        <br>
+        <a class="btn btn-primary" (click)="addToCart(1, item)">+1 to Cart</a>
+        &nbsp;
+        <a class="btn btn-secondary" (click)="checkout(item)">Checkout</a>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

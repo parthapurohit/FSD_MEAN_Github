@@ -1,0 +1,31 @@
+.item-detail {
+    border-right: 6px solid #2196f3;
+}
+
+.btn-qty {
+    background-color: rgb(212, 212, 212);
+    width: 1.5em;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.qty {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.totalprice-hr {
+    margin-top: 0.2rem;
+}

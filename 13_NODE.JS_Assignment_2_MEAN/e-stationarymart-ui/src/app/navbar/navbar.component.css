@@ -1,0 +1,37 @@
+.bg-blue {
+    background-color: #2196f3;
+}
+
+.active {
+    background-color: #0c7cd5;
+}
+
+.nav-link {
+    color: white !important;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.rm-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-text {
+    color: white;
+}
+
+#logout {
+    margin-left:1em;
+}
+
+.navbar-text {
+    cursor: pointer;
+}

@@ -1,0 +1,12 @@
+.floatright {
+    float:right;
+}
+
+.floatleft {
+    float:left;
+}
+.ohistory {
+    margin-bottom:2em;
+    padding-bottom: 3em;
+    border-bottom: 2px solid #2196f3;
+}

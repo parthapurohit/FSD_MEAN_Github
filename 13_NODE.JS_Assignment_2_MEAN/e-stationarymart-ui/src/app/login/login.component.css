@@ -1,0 +1,54 @@
+.custom-card {
+    width: 28rem;
+    margin: auto;
+}
+
+.bg-light-grey {
+    background-color: rgb(69, 73, 85);
+    border: none;
+    color: rgb(153, 153, 153);
+}
+
+.bg-light-grey::placeholder {
+    color: rgb(129, 129, 129);
+    font-weight: 450;
+}
+
+.bg-md-grey {
+    background-color: rgb(46, 49, 54);
+    border: none;
+}
+
+.bg-dark-grey {
+    background-color: rgb(34, 37, 42);
+    border: none;
+}
+
+hr {
+    border-bottom: 1px dashed rgb(61, 61, 61);
+}
+
+.btn-bg-grey {
+    background-color: rgb(82, 89, 99);
+    font-weight: bolder;
+    margin-top: 1em;
+}
+
+label {
+    color: rgb(139, 139, 139);
+    font-weight: 450;
+}
+
+label.atc_label {
+    vertical-align: 1px;
+}
+
+.btn-blue { 
+    background-color: #2196f3;
+    color: white;
+}
+
+.aligncenter {
+    display: block;
+    margin: auto;
+}
