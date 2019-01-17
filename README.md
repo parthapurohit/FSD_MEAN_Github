@@ -18,5 +18,5 @@ hhttps://github.com/parthapurohit/FSD_MEAN_Github.git
 
 Browser URL
 https://github.com/parthapurohit/FSD_MEAN_Github
-https://github.com/parthapurohit/FSD_MEAN_Github/tree/UI
+https://github.com/parthapurohit/FSD_MEAN_UI/tree/UI
 https://github.com/parthapurohit/FSD_MEAN_Github/tree/middleware
